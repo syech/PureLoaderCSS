@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container p {
+        text-align: center;
+        color: white;
+        font-weight: lighter;
+        font-size: 30px;
+    }
+
+    .shape1,
+    .shape2,
+    .shape3 {
+        width: 60px;
+        height: 60px;
+        float: left;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin: 10px;
+    }
+
+    .shape1 {
+        animation-name: apa;
+        animation-duration: 0.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        border-top: 5px solid black;
+    }
+
+    .shape2 {
+        animation-name: apa1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        border-top: 5px solid black;
+    }
+
+    .shape3 {
+        animation-name: apa2;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+    }
+
+    @keyframes apa {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes apa1 {
+        0% {
+            transform: rotate(-180deg);
+
+        }
+
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+
+    @keyframes apa2 {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p>Circle Loading Animation</p>
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+        <div class="shape3"></div>
+    </div>
+</body>
+
+</html>

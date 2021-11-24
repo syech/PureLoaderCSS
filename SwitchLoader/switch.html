@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #earth {
+        background: rgba(64, 161, 241, 0);
+        border: 10px solid rgba(0, 0, 255, 0);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        animation-name: apa;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    #earth::before {
+        content: "";
+        left: 125%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        animation-name: apa1;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        border: 10px solid rgba(0, 0, 255, 0.349);
+    }
+
+    #earth::after {
+        content: "";
+        left: -25%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        background-color: rgb(255, 187, 0);
+        border-radius: 50%;
+        animation-name: apa2;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        border: 10px solid rgba(0, 0, 255, 0.349);
+    }
+
+    @keyframes apa {
+        0% {
+            transform: rotate(-90deg);
+        }
+
+        100% {
+            transform: rotate(90deg);
+        }
+    }
+
+    @keyframes apa1 {
+        0% {
+            background: rgb(255, 187, 0);
+        }
+
+        100% {
+            transform: rgb(255, 255, 255);
+        }
+    }
+
+    @keyframes apa2 {
+        0% {
+            background: rgb(255, 255, 255);
+        }
+
+        100% {
+            transform: rgb(255, 187, 0);
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="earth"></div>
+        <div class="sun"></div>
+        <div class="moon"></div>
+    </div>
+</body>
+
+</html>

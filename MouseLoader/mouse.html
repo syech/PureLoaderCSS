@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #020208;
+    }
+
+    .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .bulat1,
+    .bulat2,
+    .bulat3 {
+        width: 70px;
+        height: 70px;
+        border: 7px solid white;
+        background-color: #fff;
+        border-radius: 50%;
+        animation-name: apa;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        float: left;
+    }
+
+    .bulat2,
+    .bulat3 {
+        animation-name: apa1;
+        width: 50px;
+        height: 50px;
+        margin-top: -10px;
+    }
+
+    .bulat2 {
+        margin-right: -40px;
+        float: left;
+    }
+
+    .bulat3 {
+        margin-left: -40px;
+        float: left;
+    }
+
+    @keyframes apa {
+        0% {}
+
+        50% {
+            opacity: 1;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+        100% {}
+    }
+
+    @keyframes apa1 {
+        0% {}
+
+        50% {
+            opacity: 1;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-top: 0;
+        }
+
+        100% {}
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="bulat2"></div>
+        <div class="bulat1"></div>
+        <div class="bulat3"></div>
+    </div>
+</body>
+
+</html>
